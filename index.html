@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinePulse | Movie & Anime Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>CinePulse</h1>
+        <p class="subtitle">Movie & Anime Profile Generator</p>
+    </header>
+
+    <main>
+        <!-- Controls -->
+        <section class="card">
+            <h2>Your Genre</h2>
+
+            <label for="genreSelect">Select Genre</label>
+            <select id="genreSelect">
+                <option value="action">Action</option>
+                <option value="drama">Drama</option>
+                <option value="romance">Romance</option>
+                <option value="anime">Anime</option>
+                <option value="mystery">Mystery</option>
+            </select>
+
+            <p id="genreLabel">Selected: Action</p>
+
+            <button id="generateBtn">Generate Profile</button>
+            <button id="clearBtn" class="secondary">Clear History</button>
+            <button id="exportBtn" class="secondary">Export JSON</button>
+
+            <p id="statusMessage"></p>
+        </section>
+
+        <!-- Output Section -->
+        <section class="card">
+            <h2>Generated Movie / Anime</h2>
+
+            <img id="posterImage" class="poster hidden" />
+            <div id="posterPlaceholder" class="poster placeholder">
+                No profile generated yet.
+            </div>
+
+            <h3 id="titleText"></h3>
+            <p id="descriptionText"></p>
+
+            <p><strong>Release Year:</strong> <span id="yearText"></span></p>
+            <p><strong>Rating:</strong> <span id="scoreText"></span></p>
+
+            <h3>Quote</h3>
+            <p id="quoteText"></p>
+
+            <button id="trailerBtn" disabled>Open poster</button>
+        </section>
+
+        <!-- History -->
+        <section class="card">
+            <h2>History</h2>
+            <ul id="historyList"></ul>
+        </section>
+
+        <!-- Export JSON -->
+        <section class="card">
+            <h2>Export JSON</h2>
+            <textarea id="exportArea" rows="8" readonly></textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; Author: K.Achchuthan   2025 | CinePulse </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
